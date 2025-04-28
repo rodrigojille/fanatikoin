@@ -23,14 +23,7 @@ async function main() {
     const tx = await TeamToken.purchaseTokens(BigInt(mintAmount));
     await tx.wait();
     console.log(`Minted ${mintAmount} tokens to ${deployer.address} using purchaseTokens.`);
-  } else if (typeof TeamToken.mint === "function") {
-    // If contract has a mint function
-    const tx = await TeamToken.mint(deployer.address, ethers.parseUnits(mintAmount, decimals));
-    await tx.wait();
-    console.log(`Minted ${mintAmount} tokens to ${deployer.address} using mint.`);
-  } else {
-    throw new Error("No mint or purchaseTokens function found on TeamToken contract.");
-  }
+
 }
 
 main().catch((error) => {
