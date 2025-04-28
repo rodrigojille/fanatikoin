@@ -12,6 +12,11 @@ import { useContext } from 'react';
 import { TokenContext } from '@/context/TokenContext';
 
 const Dashboard: React.FC = () => {
+  // Prevent SSR/Static Export errors: Only render on client
+  if (typeof window === 'undefined') {
+    // Optionally, render a loading spinner or null
+    return null;
+  }
   const { user, isAuthenticated } = useAuth();
   // Determine role
   let role = 'fan';

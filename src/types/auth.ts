@@ -21,7 +21,7 @@ export interface UserProfile {
   isTeam?: boolean;
   settings?: UserSettings;
   role?: string;
-  avatarUrl?: string; // Optional avatar image URL for user profile
+  avatarUrl?: string | null; // Optional avatar image URL for user profile (can be null or undefined)
 }
 
 // User type with id property for compatibility with rewards system

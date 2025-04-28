@@ -10,16 +10,18 @@ try {
 
 interface AvatarProps {
   address?: string;
-  src?: string;
+  src?: string | null | undefined;
   alt?: string;
   size?: number;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ address, src, alt = 'User Avatar', size = 32 }) => {
-  if (src) {
+const Avatar: React.FC<AvatarProps> = (props) => {
+  const { address, src, alt = 'User Avatar', size = 32 } = props;
+
+  if (typeof src === 'string' && src !== '') {
     return (
       <img
-        src={src}
+        src={typeof src === 'string' ? src : undefined}
         alt={alt}
         className="rounded-full object-cover"
         style={{ width: size, height: size }}

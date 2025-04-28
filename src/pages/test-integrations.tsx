@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useWeb3 } from '@/context/Web3Context';
-import web3AuthService from '@/services/web3auth.fixed';
+
 import useSociosWallet from '@/hooks/useSociosWallet';
 import { runAllTests, TestResult, TestSuite } from '@/utils/integrationTester';
 import { getCurrentNetwork, CHILIZ_NETWORKS } from '@/config/chilizNetworks';
@@ -18,50 +18,10 @@ const TestIntegrationsPage = () => {
   const [waBalance, setWaBalance] = useState<string|null>(null);
 
   const handleWeb3AuthConnect = async () => {
-    setWaStatus('connecting');
-    setWaError(null);
-    setWaUser(null);
-    setWaAddress(null);
-    setWaChainId(null);
-    setWaBalance(null);
-    try {
-      const connected = await web3AuthService.connect();
-      if (!connected) {
-        setWaStatus('error');
-        setWaError('Web3Auth connection failed.');
-        return;
-      }
-      setWaStatus('connected');
-      // Fetch user info, address, chainId, balance
-      try {
-        const user = await web3AuthService.getUserInfo();
-        setWaUser(user);
-      } catch (e) {
-        setWaUser(null);
-      }
-      try {
-        const accounts = await web3AuthService.getAccounts();
-        setWaAddress(accounts[0] || null);
-      } catch (e) {
-        setWaAddress(null);
-      }
-      try {
-        const chainId = await web3AuthService.getChainId();
-        setWaChainId(chainId);
-      } catch (e) {
-        setWaChainId(null);
-      }
-      try {
-        const balance = await web3AuthService.getBalance();
-        setWaBalance(balance);
-      } catch (e) {
-        setWaBalance(null);
-      }
-    } catch (err: any) {
-      setWaStatus('error');
-      setWaError(err?.message || String(err));
-    }
+    setWaStatus('error');
+    setWaError('Web3Auth integration has been removed. Please use MetaMask for wallet connections.');
   };
+
   const { connect: connectWeb3Auth, isConnected: isWeb3Connected, address: web3Address } = useWeb3();
   const { connect: connectSocios, isConnected: isSociosConnected, address: sociosAddress } = useSociosWallet();
   

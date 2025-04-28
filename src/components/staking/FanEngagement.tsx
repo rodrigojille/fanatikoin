@@ -9,7 +9,7 @@ import Button from '@/components/ui/Button';
 import { UserToken } from '@/types/token';
 
 interface FanEngagementProps {
-  token: UserToken;
+  token?: UserToken | null;
   onUpdate: () => void;
 }
 
@@ -19,6 +19,9 @@ interface FanEngagementProps {
  */
 const FanEngagement: React.FC<FanEngagementProps> = ({ token, onUpdate }) => {
   const { t } = useTranslation('common');
+  if (!token) {
+    return <div>{t('fanEngagement.noToken', 'No token data available.')}</div>;
+  }
   const { 
     stakingInfo, 
     userStakeInfo, 

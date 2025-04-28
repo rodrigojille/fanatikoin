@@ -118,7 +118,11 @@ export const Web3ContextProvider: React.FC<Web3ProviderProps> = ({ children }) =
         throw new Error('MetaMask is not installed');
       }
       const ethProvider = (window as any).ethereum;
-      const accounts = await ethProvider.request({ method: 'eth_accounts' });
+      let accounts = await ethProvider.request({ method: 'eth_accounts' });
+      if (!accounts || accounts.length === 0) {
+        // Prompt user to connect if not already authorized
+        accounts = await ethProvider.request({ method: 'eth_requestAccounts' });
+      }
       if (!accounts || accounts.length === 0) {
         setWalletError('No wallet accounts found. Please unlock MetaMask and ensure you have at least one account.');
         throw new Error('No accounts found');

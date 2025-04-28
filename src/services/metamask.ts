@@ -104,7 +104,7 @@ class MetaMaskService {
 
       // Get chain ID
       const network = await this.provider?.getNetwork() || { chainId: 0 };
-      this.chainId = network.chainId;
+      this.chainId = Number(network.chainId);
       console.log(`[MetaMask] Chain ID: ${this.chainId}`);
 
       // Check if on correct network
@@ -127,7 +127,7 @@ class MetaMaskService {
       window.ethereum.on('disconnect', this.handleDisconnectBound);
 
       this.connected = true;
-      this.emit({ type: 'connected', address: this.address, chainId: this.chainId! });
+      this.emit({ type: 'connected', address: this.address || '', chainId: this.chainId! });
       return true;
     } catch (error) {
       console.error("[MetaMask] Connection error:", error);

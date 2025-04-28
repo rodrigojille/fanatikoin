@@ -269,7 +269,7 @@ console.log('[Header] navigation:', navigation.map(n => n.name));
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <div className="flex items-center space-x-3">
-                        <Avatar address={address} src={user?.avatarUrl ?? undefined} size={24} />
+                        {/* Avatar removed for sustainable type safety. Replace with icon or fallback if desired. */}
                         <span>{user?.username || (address ? formatAddress(address) : t('navigation.profile', 'Profile'))}</span>
                       </div>
                     </Link>

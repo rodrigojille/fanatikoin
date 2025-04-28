@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { web3AuthService } from '@/services/web3auth.fixed';
+
 import { CONTRACT_ADDRESSES, NETWORK_CONFIG } from '@/contracts/config';
 import { ethers } from 'ethers';
 import { Web3Provider } from '@ethersproject/providers';
@@ -26,28 +26,9 @@ const ContractTestPage: React.FC = () => {
         setIsLoading(true);
         setError(null);
         
-        // Initialize Web3Auth
-        await web3AuthService.initialize();
-        
-        // Check if already logged in
-        const loggedIn = await web3AuthService.isLoggedIn();
-        setIsConnected(loggedIn);
-        
-        if (loggedIn) {
-          // Get user account
-          const accounts = await web3AuthService.getAccounts();
-          if (accounts.length > 0) {
-            setAddress(accounts[0]);
-            
-            // Get chain ID
-            const currentChainId = await web3AuthService.getChainId();
-            setChainId(currentChainId);
-            
-            // Get balance
-            const userBalance = await web3AuthService.getBalance();
-            setBalance(userBalance.toString());
-          }
-        }
+        setError('Web3Auth integration has been removed. Please use MetaMask for wallet connection.');
+        setIsLoading(false);
+        return;
       } catch (err) {
         const errorMessage = err instanceof Error ? err.message : 'Unknown error';
         setError(`Initialization error: ${errorMessage}`);
@@ -65,25 +46,9 @@ const ContractTestPage: React.FC = () => {
       setIsLoading(true);
       setError(null);
       
-      // Connect to Web3Auth
-      const connected = await web3AuthService.connect();
-      setIsConnected(connected);
-      
-      if (connected) {
-        // Get user account
-        const accounts = await web3AuthService.getAccounts();
-        if (accounts.length > 0) {
-          setAddress(accounts[0]);
-          
-          // Get chain ID
-          const currentChainId = await web3AuthService.getChainId();
-          setChainId(currentChainId);
-          
-          // Get balance
-          const userBalance = await web3AuthService.getBalance();
-          setBalance(userBalance.toString());
-        }
-      }
+      setError('Web3Auth integration has been removed. Please use MetaMask for wallet connection.');
+      setIsLoading(false);
+      return;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error';
       setError(`Connection error: ${errorMessage}`);
@@ -98,13 +63,14 @@ const ContractTestPage: React.FC = () => {
       setIsLoading(true);
       setError(null);
       
-      // Disconnect from Web3Auth
-      await web3AuthService.disconnect();
+      setError('Web3Auth integration has been removed. Please use MetaMask for wallet connection.');
       setIsConnected(false);
       setAddress(null);
       setBalance(null);
       setChainId(null);
       setContractData(null);
+      setIsLoading(false);
+      return;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error';
       setError(`Disconnect error: ${errorMessage}`);
@@ -123,15 +89,9 @@ const ContractTestPage: React.FC = () => {
         throw new Error('Not connected. Please connect first.');
       }
       
-      // Get provider and signer
-      const provider = await web3AuthService.getEthersProvider(); // returns ethers.js Web3Provider
-      const signer = await web3AuthService.getSigner(); // returns ethers.js Signer
-      
-      // Check if on the correct network
-      const currentChainId = await web3AuthService.getChainId();
-      if (currentChainId !== NETWORK_CONFIG.chainId) {
-        throw new Error(`Wrong network. Please switch to Chiliz Spicy Testnet (Chain ID: ${NETWORK_CONFIG.chainId})`);
-      }
+      setError('Web3Auth integration has been removed. Please use MetaMask for wallet connection.');
+      setIsLoading(false);
+      return;
       
       // Simple ERC20 ABI for the CHZ token
       const erc20Abi = [
@@ -141,36 +101,9 @@ const ContractTestPage: React.FC = () => {
         'function balanceOf(address) view returns (uint256)'
       ];
       
-      // Initialize contract
-      const tokenContract = new ethers.Contract(
-        CONTRACT_ADDRESSES.ChilizToken,
-        erc20Abi,
-        signer
-      );
-      
-      // Get token data
-      const name = await tokenContract.name();
-      const symbol = await tokenContract.symbol();
-      const decimals = await tokenContract.decimals();
-      const userBalance = await tokenContract.balanceOf(address);
-      
-      // Format balance
-      const formattedBalance = formatUnits(userBalance, decimals);
-      
-      // Set contract data
-      setContractData({
-        name,
-        symbol,
-        decimals,
-        balance: formattedBalance
-      });
-      
-      console.log('Token contract data:', {
-        name,
-        symbol,
-        decimals,
-        balance: formattedBalance
-      });
+      setError('Web3Auth integration has been removed. Please use MetaMask for contract interactions.');
+      setIsLoading(false);
+      return;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error';
       setError(`Contract test error: ${errorMessage}`);
