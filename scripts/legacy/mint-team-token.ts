@@ -23,6 +23,8 @@ async function main() {
     const tx = await TeamToken.purchaseTokens(BigInt(mintAmount));
     await tx.wait();
     console.log(`Minted ${mintAmount} tokens to ${deployer.address} using purchaseTokens.`);
+  }
+
 
 }
 
