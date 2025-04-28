@@ -34,6 +34,7 @@ async function main() {
     maxSupply,
     initialPrice,
     chilizToken,
+    deployer.address, // teamWallet
     { gasPrice, gasLimit, nonce: pendingNonce }
   );
   console.log("Deployment transaction sent, waiting for confirmation...");
