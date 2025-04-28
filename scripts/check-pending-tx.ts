@@ -17,7 +17,7 @@ async function main() {
   if (pendingNonce > currentNonce) {
     console.log("You have pending transactions:");
     for (let n = currentNonce; n < pendingNonce; n++) {
-      const tx = await provider.getTransaction(n);
+      const tx = await provider.getTransaction(n.toString());
       if (tx && !tx.blockNumber) {
         console.log(`  - Pending tx at nonce ${n}: ${tx.hash}`);
       }
