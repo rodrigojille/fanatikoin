@@ -23,6 +23,7 @@ async function main() {
   const TeamToken = await ethers.getContractFactory("TeamToken");
   const gasPrice = ethers.parseUnits('6000', 'gwei');
   const gasLimit = 7000000;
+  const provider = deployer.provider!;
   console.log("About to deploy TeamToken with:", { name, symbol, description, benefits, maxSupply: maxSupply.toString(), initialPrice: initialPrice.toString(), chilizToken, gasPrice: gasPrice.toString(), gasLimit });
   const pendingNonce = await provider.getTransactionCount(deployer.address, "pending");
   const teamToken = await TeamToken.deploy(
