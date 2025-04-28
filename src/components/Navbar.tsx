@@ -103,7 +103,7 @@ const Navbar = () => {
                 {/* User dropdown for profile/settings, visible for both wallet and social login */}
                 <div className="relative group">
                   <button className="flex items-center space-x-1 hover:text-primary focus:outline-none">
-                    <Avatar address={address} src={user?.avatarUrl !== null ? user.avatarUrl : undefined} size={24} />
+                    <Avatar address={address} src={user?.avatarUrl || undefined} size={24} />
                     <span className="flex items-center font-medium space-x-2">
                       <span>{user?.username || (address ? formatAddress(address) : t('profile', 'Profile'))}</span>
                     </span>
@@ -115,6 +115,7 @@ const Navbar = () => {
                   </div>
                 </div>
               </>
+            )}
           </div>
 
           {/* Wallet Status */}
