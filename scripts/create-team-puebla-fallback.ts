@@ -45,6 +45,7 @@ async function main() {
       benefits,
       maxSupply,
       initialPrice,
+      deployer.address, // teamWallet argument required by the contract
       {
         gasPrice,
         gasLimit,
