@@ -1,6 +1,5 @@
 
-import * as dotenv from "dotenv";
-dotenv.config({ path: ".env.local" });
+
 
 import { CONTRACT_ADDRESSES } from "../src/contracts/config";
 
