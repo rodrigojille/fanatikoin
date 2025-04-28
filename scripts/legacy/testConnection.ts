@@ -1,6 +1,6 @@
 import { ethers, JsonRpcProvider } from "ethers";
 import hre from "hardhat";
-import { CONTRACT_ADDRESSES, NETWORK_CONFIG } from "../src/contracts/config";
+import { CONTRACT_ADDRESSES, NETWORK_CONFIG } from "../../src/contracts/config";
 
 async function main() {
   console.log("Testing connection to Chiliz testnet...");
