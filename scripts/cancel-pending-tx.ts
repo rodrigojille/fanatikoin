@@ -20,7 +20,7 @@ async function main() {
         // Fetch the stuck transaction for this nonce
         let stuckTx;
         try {
-          stuckTx = await provider.getTransaction(n);
+          stuckTx = await provider.getTransaction(n.toString());
         } catch (err) {
           console.error(`Could not fetch transaction for nonce ${n}:`, err);
           continue;
