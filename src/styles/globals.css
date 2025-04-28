@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 255 90 95; /* Socios red */
+    --secondary: 0 0 0; /* Black */
+    --accent: 255 196 12; /* Socios yellow */
+    --background: 255 255 255; /* White */
+    --foreground: 17 24 39; /* gray-900 */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans;
+  }
+
+  /* Typography */
+  h1 {
+    @apply text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl;
+  }
+
+  /* Add custom fonts similar to Socios */
+  @font-face {
+    font-family: 'Socios';
+    src: local('Montserrat'), local('Poppins');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Socios';
+    src: local('Montserrat Bold'), local('Poppins Bold');
+    font-weight: bold;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-base {
+    @apply inline-flex items-center justify-center rounded-md font-medium transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-[rgb(255,90,95)] text-white hover:bg-[rgb(230,65,70)] focus:ring-2 focus:ring-[rgb(255,90,95)] focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-black text-white hover:bg-gray-800 focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply btn-base bg-[rgb(255,196,12)] text-black hover:bg-[rgb(230,176,10)] focus:ring-2 focus:ring-[rgb(255,196,12)] focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply btn-base bg-transparent text-black border-2 border-black hover:bg-black hover:text-white focus:ring-2 focus:ring-black focus:ring-offset-2;
+  }
+
+  .btn-danger {
+    @apply btn-base bg-red-600 text-white hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+
+  /* Button sizes */
+  .btn-sm {
+    @apply px-3 py-2 text-sm;
+  }
+
+  .btn-md {
+    @apply px-4 py-2 text-base;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-lg ring-1 ring-gray-900/5 p-6;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Forms */
+  .form-input {
+    @apply block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-blue-50;
+  }
+
+  .nav-link-active {
+    @apply text-blue-600 bg-blue-50;
+  }
+
+  /* Animations */
+  .animate-gradient-x {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 8s linear infinite;
+}
+
+/* Grid pattern background */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgb(209 213 219 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(209 213 219 / 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

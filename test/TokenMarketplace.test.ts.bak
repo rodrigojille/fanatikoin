@@ -1,0 +1,169 @@
+import { expect } from "chai";
+import { ethers } from "hardhat";
+import type { ContractFactory } from "ethers";
+import type { SignerWithAddress } from "@nomicfoundation/hardhat-ethers/signers";
+import type { IERC20, ITeamToken, ITokenMarketplace, IMockCHZ } from "./types";
+
+describe("TokenMarketplace", function () {
+  let tokenMarketplace: ITokenMarketplace;
+  let teamToken: ITeamToken;
+  let mockCHZ: IMockCHZ;
+  let owner: any;
+  let seller: SignerWithAddress;
+  let buyer: SignerWithAddress;
+
+  const PLATFORM_FEE = 250; // 2.5%
+
+  beforeEach(async function () {
+    [owner, seller, buyer] = await ethers.getSigners();
+
+    // Deploy MockCHZ
+    const mockCHZFactory: ContractFactory = await ethers.getContractFactory("MockCHZ");
+    const mockCHZContract = await mockCHZFactory.deploy();
+    await mockCHZContract.waitForDeployment();
+    mockCHZ = mockCHZContract as unknown as IMockCHZ & { deploymentTransaction(): any };
+    await mockCHZ.waitForDeployment();
+
+    // Deploy TokenMarketplace
+    const tokenMarketplaceFactory = await ethers.getContractFactory("TokenMarketplace");
+    const tokenMarketplaceContract = await tokenMarketplaceFactory.deploy(
+      await mockCHZ.getAddress(),
+      PLATFORM_FEE
+    );
+    await tokenMarketplaceContract.waitForDeployment();
+    tokenMarketplace = tokenMarketplaceContract as unknown as ITokenMarketplace & { deploymentTransaction(): any };
+
+    // Deploy a test TeamToken
+    const teamTokenFactory = await ethers.getContractFactory("TeamToken");
+    const teamTokenContract = await teamTokenFactory.deploy(
+      "Test Token",
+      "TEST",
+      "Test Description",
+      ["Benefit 1", "Benefit 2"],
+      ethers.parseEther("1000000"), // maxSupply
+      ethers.parseEther("10"), // initialPrice
+      await mockCHZ.getAddress()
+    );
+    await teamTokenContract.waitForDeployment();
+    teamToken = teamTokenContract as unknown as ITeamToken & { deploymentTransaction(): any };
+
+    // Setup initial balances
+    await mockCHZ.mint(buyer.address, ethers.parseEther("1000"));
+    await mockCHZ.mint(seller.address, ethers.parseEther("1000"));
+    await mockCHZ.connect(buyer).approve(await tokenMarketplace.getAddress(), ethers.parseEther("1000"));
+    await mockCHZ.connect(seller).approve(await teamToken.getAddress(), ethers.parseEther("1000"));
+  });
+
+  describe("Listing", function () {
+    const LISTING_PRICE = ethers.parseEther("50");
+    const LISTING_AMOUNT = ethers.parseEther("100");
+
+    beforeEach(async function () {
+      // Seller needs to have tokens first
+      const price = await teamToken.currentPrice();
+      const cost = (LISTING_AMOUNT * price) / ethers.parseEther("1");
+      
+      // Ensure seller has enough CHZ balance
+      const sellerBalance = await mockCHZ.balanceOf(seller.address);
+      if (sellerBalance < cost) {
+        await mockCHZ.mint(seller.address, cost * 2n);
+      }
+      
+      // Approve CHZ tokens for purchase
+      await mockCHZ.connect(seller).approve(await teamToken.getAddress(), 0); // Reset allowance
+      await mockCHZ.connect(seller).approve(await teamToken.getAddress(), cost * 2n);
+      
+      // Purchase tokens
+      await teamToken.connect(seller).purchaseTokens(LISTING_AMOUNT);
+      
+      // Approve tokens for marketplace
+      await teamToken.connect(seller).approve(await tokenMarketplace.getAddress(), LISTING_AMOUNT);
+    });
+
+    it("Should allow users to list tokens for sale", async function () {
+      await tokenMarketplace.connect(seller).listToken(
+        await teamToken.getAddress(),
+        LISTING_PRICE
+      );
+
+      const isListed = await tokenMarketplace.listedTokens(await teamToken.getAddress());
+      const price = await tokenMarketplace.tokenPrices(await teamToken.getAddress());
+      expect(isListed).to.be.true;
+      expect(price).to.equal(LISTING_PRICE);
+    });
+  });
+
+  describe("Purchase", function () {
+    const LISTING_PRICE = ethers.parseEther("50");
+    const LISTING_AMOUNT = ethers.parseEther("100");
+    const PURCHASE_AMOUNT = ethers.parseEther("50");
+
+    beforeEach(async function () {
+      // Seller needs to have tokens first
+      const price = await teamToken.currentPrice();
+      const cost = (LISTING_AMOUNT * price) / ethers.parseEther("1");
+      
+      // Ensure seller has enough CHZ balance
+      const sellerBalance = await mockCHZ.balanceOf(seller.address);
+      if (sellerBalance < cost) {
+        await mockCHZ.mint(seller.address, cost * 2n);
+      }
+      
+      // Approve CHZ tokens for purchase
+      await mockCHZ.connect(seller).approve(await teamToken.getAddress(), 0); // Reset allowance
+      await mockCHZ.connect(seller).approve(await teamToken.getAddress(), cost * 2n);
+      
+      // Purchase tokens
+      await teamToken.connect(seller).purchaseTokens(LISTING_AMOUNT);
+      
+      // Approve tokens for marketplace
+      await teamToken.connect(seller).approve(await tokenMarketplace.getAddress(), LISTING_AMOUNT);
+      
+      // Buyer needs to approve CHZ transfer
+      await mockCHZ.connect(buyer).approve(
+        await tokenMarketplace.getAddress(),
+        ethers.parseEther("10000")
+      );
+      
+      // Buyer needs to have enough CHZ
+      await mockCHZ.connect(owner).transfer(
+        buyer.address,
+        ethers.parseEther("10000")
+      );
+      
+      // Seller needs to list the tokens
+      await tokenMarketplace.connect(seller).listToken(
+        await teamToken.getAddress(),
+        LISTING_PRICE
+      );
+    });
+
+    it("Should allow users to purchase listed tokens", async function () {
+      const initialSellerBalance = await mockCHZ.balanceOf(seller.address);
+      const initialBuyerTokens = await teamToken.balanceOf(buyer.address);
+
+      // Calculate cost and approve
+      const cost = (LISTING_PRICE * PURCHASE_AMOUNT) / ethers.parseEther("1");
+      await mockCHZ.connect(buyer).approve(
+        await tokenMarketplace.getAddress(),
+        cost * 2n // Ensure enough allowance
+      );
+
+      await tokenMarketplace.connect(buyer).buyTokens(
+        await teamToken.getAddress(),
+        PURCHASE_AMOUNT
+      );
+
+      expect(await teamToken.balanceOf(buyer.address)).to.equal(
+        initialBuyerTokens + PURCHASE_AMOUNT
+      );
+
+      const fee = (cost * BigInt(PLATFORM_FEE)) / 10000n;
+      const expectedSellerPayment = cost - fee;
+      
+      expect(await mockCHZ.balanceOf(seller.address)).to.equal(
+        initialSellerBalance + expectedSellerPayment
+      );
+    });
+  });
+});

@@ -1,0 +1,12 @@
+[build]
+command = "npm run build"
+publish = ".next"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[build.environment]
+NEXT_PUBLIC_CHAIN_ID = "88882"
+NEXT_PUBLIC_RPC_URL = "https://spicy-rpc.chiliz.com/"
+NEXT_PUBLIC_WEB3AUTH_CLIENT_ID = "BL2SyGQwKpugXPdJa6GkTSXKFdipe73nOKw1P4PIOYo0a_mBR3ACfWjSLvm7z26meFgCJG3EXN4cSjDfugKhBAM""BL2SyGQwKpugxPKuJq8cKTSKXFidpe73nOKwrI4PlOYo0a_mBR3ACWiISLLym7z26emFgCjJXSBfUqkT"
+NEXT_PUBLIC_WEB3AUTH_NETWORK = "sapphire_devnet"

@@ -1,0 +1,7 @@
+.avatar {
+  border-radius: 9999px;
+  object-fit: cover;
+  display: inline-block;
+  background: linear-gradient(135deg, #ff5a5f 0%, #a259f7 100%);
+  box-shadow: 0 2px 8px 0 rgba(255,90,95,0.08);
+}

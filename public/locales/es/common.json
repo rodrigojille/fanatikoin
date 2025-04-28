@@ -1,0 +1,741 @@
+{
+  "navigation": {
+    "governance": "Gobernanza",
+    "voting": "Votación",
+    "communityVoting": "Votación Comunitaria",
+    "voteNow": "Votar Ahora",
+    "active": "Activo",
+    "endsIn": "Termina en",
+    "recentActivity": "Actividad Reciente",
+    "myTokens": {
+      "owned": "Tokens Propios",
+      "created": "Tokens Creados",
+      "uniqueTokens": "Tokens Únicos",
+      "totalTokens": "Total de Tokens"
+    },
+    "fanEngagement": {
+      "title": "Participación de Fans",
+      "dashboard": "Panel Principal",
+      "digitalMerch": "Merchandising Digital & NFTs",
+      "stadiumExperience": "Experiencia en el Estadio",
+      "fanContent": "Contenido y Monetización de Fans"
+    },
+    "home": "Inicio",
+    "marketplace": "Mercado",
+    "auctions": "Subastas",
+    "myTokens": "Mis Tokens",
+    "createToken": "Crear Token",
+    "team": "Equipo",
+    "admin": "Admin"
+  },
+  "team": {
+    "connectWalletPrompt": "Por favor, conecta tu billetera para gestionar tu equipo",
+
+    "title": "Gestión de Tokens del Equipo",
+    "overview": "Resumen del Equipo",
+    "totalTokens": "Total de Tokens",
+    "totalHolders": "Total de Holders",
+    "activeAuctions": "Subastas Activas",
+    "yourTokens": "Tus Tokens",
+    "noTokens": "Aún no hay tokens creados",
+    "createToken": "Crear Nuevo Token",
+    "tokenName": "Nombre del Token",
+    "tokenSymbol": "Símbolo del Token",
+    "totalSupply": "Suministro Total",
+    "circulatingSupply": "En Circulación",
+    "availableSupply": "Disponible",
+    "holders": "Holders",
+    "currentPrice": "Precio Actual",
+    "buyback": "Recomprar",
+    "createAuction": "Crear Subasta",
+    "enterBuybackAmount": "Ingrese cantidad a recomprar:",
+    "enterAuctionAmount": "Ingrese cantidad de tokens para la subasta:",
+    "enterStartingPrice": "Ingrese precio inicial en CHZ:",
+    "enterDuration": "Ingrese duración de la subasta en horas:",
+    "creating": "Creando...",
+    "create": "Crear Token",
+    "initialPrice": "Precio Inicial (CHZ)"
+  },
+  "admin": {
+    "title": "Panel de Administración",
+    "totalUsers": "Total de Usuarios",
+    "activeTokens": "Tokens Activos",
+    "totalTransactions": "Total de Transacciones",
+    "revenue": "Ingresos (CHZ)",
+    "recentTransactions": "Transacciones Recientes",
+    "transactionId": "ID de Transacción",
+    "user": "Usuario",
+    "amount": "Cantidad",
+    "status": "Estado",
+    "completed": "Completado",
+    "systemStatus": "Estado del Sistema",
+    "contractStatus": "Estado del Contrato Inteligente",
+    "mainContract": "Contrato Principal",
+    "tokenContract": "Contrato de Token",
+    "active": "Activo",
+    "networkStatus": "Estado de la Red",
+    "gasPrice": "Precio del Gas",
+    "blockNumber": "Número de Bloque"
+  },
+  "fanEngagement": {
+    "title": "Participación de Fans",
+    "fan": "Fan",
+    "points": "Puntos",
+    "pointsForNextLevel": "Puntos para el siguiente nivel",
+    "challengesDescription": "Completa desafíos para ganar más puntos y desbloquear nuevas recompensas.",
+    "viewChallenges": "Ver Desafíos",
+    "completed": "Completado",
+    "complete": "Completar",
+    "communityActivity": "Actividad Comunitaria",
+    "upcomingEvents": "Próximos Eventos",
+    "communityPolls": "Encuestas Comunitarias",
+    "challenge": {
+      "stake7days": {
+        "name": "Mantener tokens 7 días",
+        "description": "Mantén tokens en staking al menos 7 días"
+      },
+      "referFriend": {
+        "name": "Recomienda a un amigo",
+        "description": "Invita a un amigo a hacer staking"
+      },
+      "socialShare": {
+        "name": "Compartir en redes sociales",
+        "description": "Comparte tu apoyo en redes sociales"
+      },
+      "matchPrediction": {
+        "name": "Predicción de partido",
+        "description": "Acierta el resultado de un partido"
+      },
+      "communityPoll": {
+        "name": "Encuesta comunitaria",
+        "description": "Participa en encuestas de la comunidad"
+      }
+    },
+    "events": {
+      "ama": "AMA Comunitario con el Capitán del Equipo",
+      "watchParty": "Fiesta de Partido en Vivo",
+      "exclusiveMeeting": "Reunión Exclusiva para Holders de Fan Token"
+    },
+    "polls": {
+      "featuredPlayer": "¿Qué jugador debería aparecer en la próxima colección de fan tokens?",
+      "player1": "Carlos Rodriguez",
+      "player2": "Miguel Fernandez",
+      "player3": "Juan Martinez"
+    },
+    "bronzeBenefits": "Beneficios de Bronce",
+    "silverBenefits": "Beneficios de Plata",
+    "goldBenefits": "Beneficios de Oro",
+    "exclusiveContentAccess": "Acceso a contenido exclusivo",
+    "digitalCollectibles": "Coleccionables digitales",
+    "matchTicketDiscounts": "Descuentos en boletos de partido",
+    "merchandiseDiscounts": "Descuentos en merchandising",
+    "meetAndGreet": "Encuentro con jugadores",
+    "vipExperiences": "Experiencias VIP"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "about.team": "Equipo",
+    "about.careers": "Carreras",
+    "about.contact": "Contacto",
+    "resources": "Recursos",
+    "resources.docs": "Documentación",
+    "resources.whitepaper": "Whitepaper",
+    "resources.faq": "Preguntas Frecuentes",
+    "legal": "Legal",
+    "legal.privacy": "Política de Privacidad",
+    "legal.terms": "Términos de Servicio",
+    "legal.cookies": "Política de Cookies",
+    "description": "Empoderando a los fans del deporte a través de la tecnología blockchain. Posee, comercia y vota con tokens de fan.",
+    "rights": "Todos los derechos reservados."
+  },
+  "network": {
+    "connected": "Conectado a la Red Chiliz",
+    "wrong": "Red Incorrecta",
+    "wrongMessage": "Por favor, cambia a la Red Chiliz",
+    "switch": "Cambiar Red",
+    "switchSuccess": "Cambio exitoso a {{network}}",
+    "addSuccess": "Red {{network}} agregada exitosamente",
+    "addError": "Error al agregar {{network}} a MetaMask",
+    "switchError": "Error al cambiar a {{network}}",
+    "connectSuccess": "Conexión exitosa a {{network}}!"
+  },
+  "profile": {
+    "view": "Ver Perfil",
+    "settings": "Configuración",
+    "title": "Perfil de Usuario",
+    "subtitle": "Detalles personales e información de billetera",
+    "edit": "Editar Perfil",
+    "username": "Nombre de Usuario",
+    "email": "Correo Electrónico",
+    "avatarUrl": "URL del Avatar",
+    "saveChanges": "Guardar Cambios",
+    "cancel": "Cancelar",
+    "walletAddress": "Dirección de Billetera",
+    "chzBalance": "Balance CHZ",
+    "avatar": "Avatar",
+    "connectWalletMessage": "Por favor, conecta tu billetera para ver tu perfil"
+  },
+  "settings": {
+    "title": "Configuración",
+    "subtitle": "Administra tus preferencias de notificaciones y visualización",
+    "connectWalletMessage": "Por favor, conecta tu billetera para acceder a la configuración",
+    "notifications": {
+      "title": "Notificaciones",
+      "email": "Notificaciones por Correo",
+      "push": "Notificaciones Push",
+      "auction": "Alertas de Subastas",
+      "price": "Alertas de Precios"
+    },
+    "display": {
+      "title": "Visualización",
+      "theme": "Tema",
+      "themeOptions": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      },
+      "currency": "Moneda de Visualización"
+    },
+    "saveChanges": "Guardar Cambios"
+  },
+  "home": {
+    "hero": {
+      "title": "Revoluciona",
+      "subtitle": "tu pasión por el deporte",
+      "description": "Sé dueño de una parte de tu equipo favorito. Compra y vende tokens de fan, vota en decisiones del equipo y desbloquea experiencias exclusivas en la blockchain de Chiliz.",
+      "discover": "Descubrir Equipos"
+    },
+    "stats": {
+      "title": "Fanatikoin en Números",
+      "subtitle": "Únete a miles de aficionados que ya participan en el futuro del compromiso deportivo",
+      "users": "Aficionados Activos",
+      "users.description": "Participando en decisiones de equipo",
+      "volume": "Volumen de Trading",
+      "volume.description": "En los últimos 30 días",
+      "teams": "Equipos",
+      "teams.description": "Con tokens disponibles"
+    },
+    "featured": {
+      "title": "Equipos Destacados",
+      "subtitle": "Invierte en los mejores equipos"
+    },
+    "features": {
+      "title": "¿Por qué Elegirnos?",
+      "subtitle": "Experimenta el futuro del compromiso de los fans",
+      "secure": {
+        "title": "Seguridad",
+        "description": "Transacciones seguras y transparentes"
+      },
+      "trade": {
+        "title": "Trading",
+        "description": "Compra y venta de tokens de manera fácil"
+      },
+      "rewards": {
+        "title": "Gobernanza de Fans",
+        "description": "Vota en decisiones del equipo y forma parte del futuro"
+      }
+    },
+    "teams": {
+      "title": "Equipos Destacados",
+      "subtitle": "Invierte en los mejores equipos y sé parte de su trayectoria",
+      "buyButton": "Comprar Token",
+      "price": "Precio",
+      "supply": "Suministro",
+      "available": "Disponible"
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "subtitle": "Pasos simples para comenzar tu viaje con los tokens de fan",
+      "step1": {
+        "title": "Conecta Tu Billetera",
+        "description": "Vincula tu billetera de criptomonedas para acceder al mercado de Fanatikoin de forma segura."
+      },
+      "step2": {
+        "title": "Elige Tu Equipo",
+        "description": "Navega por nuestro mercado y selecciona tokens de tus equipos deportivos favoritos."
+      },
+      "step3": {
+        "title": "Disfruta los Beneficios",
+        "description": "Desbloquea ventajas exclusivas, participa en decisiones del equipo y comercia tokens en nuestro mercado."
+      }
+    },
+    "cta": {
+      "title": "Únete a la",
+      "titlePart2": "revolución",
+      "description": "Sé parte del futuro del fanatismo deportivo. Conecta tu billetera y comienza a comerciar tokens de equipos hoy mismo.",
+      "learnMore": "Saber Más",
+      "feature1": {
+        "title": "Transacciones Seguras",
+        "description": "Todas las transacciones están aseguradas por la blockchain de Chiliz, garantizando transparencia y seguridad."
+      },
+      "feature2": {
+        "title": "Beneficios Comunitarios",
+        "description": "Los poseedores de tokens obtienen acceso exclusivo a eventos del equipo, derechos de voto y mercancía especial."
+      }
+    }
+  },
+  "common": {
+    "hide": "Ocultar"
+  ,
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "loading": "Cargando...",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "submit": "Enviar",
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "or": "O"
+  },
+  "connect": {
+    "connectWallet": "Conectar Billetera",
+    "connectMessage": "Por favor, conecta tu billetera para acceder al marketplace",
+    "connecting": "Conectando...",
+    "connected": "Conectado",
+    "disconnect": "Desconectar",
+    "success": "¡Billetera conectada exitosamente!",
+    "error": "Error al conectar la billetera",
+    "disconnected": "Billetera desconectada",
+    "disconnectSuccess": "Billetera desconectada exitosamente",
+    "disconnectError": "Error al desconectar la billetera"
+  },
+  "createToken": {
+    "title": "Crear Token de Equipo",
+    "name": "Nombre del Token",
+    "symbol": "Símbolo del Token",
+    "description": "Descripción",
+    "benefits": "Beneficios",
+    "addBenefit": "Añadir Beneficio",
+    "initialSupply": "Suministro Inicial",
+    "maxSupply": "Suministro Máximo",
+    "initialPrice": "Precio Inicial (CHZ)",
+    "create": "Crear Token"
+  },
+  "marketplace": {
+    "connectWalletPrompt": "Por favor, conecta tu billetera para acceder al mercado de tokens",
+
+    "title": "Mercado de Tokens de Equipos",
+    "subtitle": "Explora y compra tokens de fan de tus equipos deportivos favoritos",
+    "noTokens": {
+      "title": "No se encontraron tokens",
+      "message": "Intenta ajustar tus criterios de búsqueda o filtrado"
+    },
+    "price": "Precio",
+    "buy": "Comprar",
+    "sell": "Vender",
+    "list": "Listar Token",
+    "unlist": "Quitar de Lista",
+    "filters": {
+      "allCategories": "Todas las Categorías",
+      "football": "Fútbol",
+      "basketball": "Baloncesto",
+      "baseball": "Béisbol"
+    },
+    "sort": {
+      "priceHighToLow": "Precio: Mayor a Menor",
+      "priceLowToHigh": "Precio: Menor a Mayor",
+      "nameAtoZ": "Nombre: A a Z",
+      "nameZtoA": "Nombre: Z a A"
+    },
+    "search": "Buscar tokens..."
+  },
+  "auctions": {
+    "connectWalletPrompt": "Por favor, conecta tu billetera para participar en subastas",
+
+    "title": "Subastas en Vivo",
+    "subtitle": "Lance ofertas en tokens exclusivos de equipos antes de que se agoten",
+    "connectWallet": "Conectar Billetera",
+    "connectYourWalletToPlaceBids": "Conecta tu billetera para hacer ofertas",
+    "youNeedToConnectYourWalletToParticipateInAuctions": "Necesitas conectar tu billetera para participar en las subastas.",
+    "searchAuctions": "Buscar subastas...",
+    "endingSoon": "Termina Pronto",
+    "highestBid": "Oferta Más Alta",
+    "mostBids": "Más Ofertas",
+    "endsIn": "Termina en",
+    "currentBid": "Oferta Actual",
+    "totalBids": "Ofertas Totales",
+    "viewAuction": "Ver Subasta",
+    "noAuctionsFound": "No se encontraron subastas",
+    "tryAdjustingYourSearchCriteria": "Intenta ajustar tus criterios de búsqueda",
+    "ended": "Terminada",
+    "timeFormat": {
+      "days": "d",
+      "hours": "h",
+      "minutes": "m"
+    },
+    "descriptions": {
+      "barcelona": "Token limitado con beneficios exclusivos para fans del FC Barcelona",
+      "manchester": "Token fundador con beneficios vitalicios para fans del Manchester United",
+      "juventus": "Token VIP con acceso exclusivo a eventos y mercancía de la Juventus",
+      "psg": "Token Elite para superfans del PSG con privilegios especiales",
+      "milan": "Token Leyendas con acceso a eventos y memorabilia de la AC Milan",
+      "arsenal": "Token Premium para seguidores del Arsenal con beneficios exclusivos",
+      "juv": "Token VIP con acceso exclusivo a eventos y mercancía de la Juventus",
+      "bar": "Token limitado con beneficios exclusivos para fans del FC Barcelona",
+      "mun": "Token fundador con beneficios vitalicios para fans del Manchester United",
+      "psg-elt": "Token Elite para superfans del PSG con privilegios especiales",
+      "acm": "Token Leyendas con acceso a eventos y memorabilia de la AC Milan",
+      "ars-prm": "Token Premium para seguidores del Arsenal con beneficios exclusivos",
+      "default": "Token especial con beneficios exclusivos"
+    }
+  },
+  "myTokens": {
+    "connectWalletPrompt": "Por favor, conecta tu billetera para ver tus tokens",
+
+    "title": "Mis Tokens",
+    "subtitle": "Administra tus tokens de equipo y ve tu cartera",
+    "connectYourWallet": "Conectar Billetera",
+    "connectYourWalletToViewYourTokensAndPortfolio": "Conecta tu billetera para ver tus tokens y cartera",
+    "connectWallet": "Conectar Billetera",
+    "loadingYourTokens": "Cargando tus tokens...",
+    "portfolioSummary": "Resumen de Cartera",
+    "totalValue": "Valor Total",
+    "tokensOwned": "Tokens Poseídos",
+    "totalQuantity": "Cantidad Total",
+    "ownedTokens": "Tokens Propios",
+    "createdTokens": "Tokens Creados",
+    "activity": "Actividad",
+    "balance": "Balance",
+    "currentPrice": "Precio Actual",
+    "viewToken": "Ver Token",
+    "transfer": "Transferir",
+    "noTokensFound": "No se encontraron tokens",
+    "youDontOwnAnyTeamTokensYet": "No posees tokens de equipo aún",
+    "browseMarketplace": "Explorar Mercado",
+    "noCreatedTokens": "No hay Tokens Creados",
+    "youHaventCreatedAnyTeamTokensYet": "No has creado ningún token de equipo aún",
+    "createToken": "Crear Token",
+    "recentActivity": "Actividad Reciente",
+    "purchasedFcBarcelonaToken": "Compró Token FC Barcelona",
+    "purchasedJuventusToken": "Compró Token Juventus",
+    "purchasedManchesterUnitedToken": "Compró Token Manchester United",
+    "2DaysAgo": "Hace 2 días",
+    "5DaysAgo": "Hace 5 días",
+    "1WeekAgo": "Hace 1 semana"
+  },
+  "token": {
+    "benefits": {
+      "title": "Beneficios",
+      "voteOnClubDecisions": "Votar en decisiones del club",
+      "accessToExclusiveContent": "Acceso a contenido exclusivo",
+      "merchandiseDiscounts": "Descuentos en merchandising",
+      "chanceToWinMatchTickets": "Oportunidad de ganar entradas para partidos",
+      "voteOnTeamDecisions": "Votar en decisiones del equipo",
+      "chanceToWinGameTickets": "Oportunidad de ganar entradas para juegos"
+    },
+    "purchase": {
+      "connectWallet": "Conectar Billetera para Comprar",
+      "buyTokens": "Comprar {{quantity}} Tokens de {{symbol}}",
+      "error": {
+        "invalidQuantity": "Por favor, ingresa una cantidad válida"
+      },
+      "success": "¡Compra exitosa! {{quantity}} tokens de {{symbol}} han sido añadidos a tu billetera.",
+      "disclaimer": {
+        "chiliz": "* Las compras se realizan utilizando tokens Chiliz (CHZ) en la blockchain de Chiliz.",
+        "network": "* Asegúrate de que tu billetera esté conectada a la red Chiliz."
+      }
+    },
+    "labels": {
+      "available": "Disponible",
+      "quantity": "Cantidad:",
+      "pricePerToken": "Precio por token",
+      "total": "Total",
+      "processing": "Procesando..."
+    }
+  },
+
+  "privacy": {
+    "meta": {
+      "title": "Política de Privacidad",
+      "description": "Conoce cómo Fanatikoin recopila, utiliza y protege tu información personal.",
+      "keywords": "política de privacidad, protección de datos, información personal, Fanatikoin, privacidad blockchain"
+    },
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última Actualización: 10 de abril de 2025",
+    "introduction": "En Fanatikoin, nos tomamos tu privacidad en serio. Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos tu información cuando utilizas nuestra plataforma.",
+    "sections": {
+      "collection": {
+        "title": "Información que Recopilamos",
+        "content": "Recopilamos información personal que nos proporcionas voluntariamente cuando te registras en nuestra plataforma, expresas interés en obtener información sobre nosotros o nuestros productos, o te pones en contacto con nosotros. La información personal que recopilamos puede incluir tu nombre, dirección de correo electrónico, dirección de billetera y cualquier otra información que elijas proporcionar. También podemos recopilar información automáticamente cuando utilizas nuestra plataforma, incluyendo dirección IP, tipo de navegador, información del dispositivo y datos de uso."
+      },
+      "use": {
+        "title": "Cómo Utilizamos tu Información",
+        "content": "Utilizamos la información que recopilamos para proporcionar, mantener y mejorar nuestra plataforma; para procesar transacciones y enviar información relacionada; para responder a tus comentarios, preguntas y solicitudes; para enviarte avisos técnicos, actualizaciones, alertas de seguridad y mensajes de soporte; para personalizar tu experiencia; para monitorear y analizar patrones de uso; y para detectar, prevenir y abordar problemas técnicos. También podemos utilizar tu información para comunicarnos contigo sobre productos, servicios, ofertas y eventos, y proporcionarte otras noticias o información sobre Fanatikoin y nuestros socios."
+      },
+      "sharing": {
+        "title": "Compartir y Divulgar Información",
+        "content": "No compartimos, vendemos, alquilamos ni intercambiamos tu información personal con terceros para sus fines comerciales, excepto como se describe en esta Política de Privacidad. Podemos compartir tu información con proveedores de servicios externos que realizan servicios en nuestro nombre, como procesamiento de pagos, análisis de datos, entrega de correo electrónico, servicios de alojamiento y servicio al cliente. También podemos compartir tu información según lo exija la ley, como para cumplir con una citación o proceso legal similar, o cuando creemos de buena fe que la divulgación es necesaria para proteger nuestros derechos, proteger tu seguridad o la seguridad de otros, investigar fraudes o responder a una solicitud gubernamental."
+      },
+      "security": {
+        "title": "Seguridad de Datos",
+        "content": "Hemos implementado medidas de seguridad técnicas y organizativas apropiadas diseñadas para proteger la seguridad de cualquier información personal que procesamos. Sin embargo, a pesar de nuestras salvaguardas y esfuerzos para asegurar tu información, ninguna transmisión electrónica a través de Internet o tecnología de almacenamiento de información puede garantizarse como 100% segura, por lo que no podemos prometer ni garantizar que hackers, ciberdelincuentes u otros terceros no autorizados no puedan burlar nuestra seguridad y recopilar, acceder, robar o modificar indebidamente tu información."
+      },
+      "cookies": {
+        "title": "Cookies y Tecnologías de Seguimiento",
+        "content": "Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestra plataforma y mantener cierta información. Las cookies son archivos con una pequeña cantidad de datos que pueden incluir un identificador único anónimo. Puedes instruir a tu navegador para que rechace todas las cookies o para que indique cuándo se está enviando una cookie. Sin embargo, si no aceptas cookies, es posible que no puedas utilizar algunas partes de nuestra plataforma."
+      },
+      "rights": {
+        "title": "Tus Derechos de Privacidad",
+        "content": "Dependiendo de tu ubicación, puedes tener ciertos derechos con respecto a tu información personal, como el derecho a acceder, corregir o eliminar tu información personal, el derecho a restringir u objetar nuestro procesamiento de tu información personal, y el derecho a la portabilidad de datos. Para ejercer estos derechos, contáctanos utilizando la información de contacto proporcionada a continuación."
+      },
+      "contact": {
+        "title": "Contáctanos",
+        "content": "Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos en privacy@fanatikoin.com o por correo a Fanatikoin, 123 Blockchain Avenue, Silicon Valley, CA 94025, Estados Unidos."
+      }
+    }
+  },
+
+  "terms": {
+    "meta": {
+      "title": "Términos de Servicio",
+      "description": "Términos de Servicio para la plataforma Fanatikoin",
+      "keywords": "términos de servicio, legal, acuerdo de usuario, Fanatikoin, términos blockchain"
+    },
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última Actualización: 13 de abril de 2025",
+    "sections": {
+      "acceptance": {
+        "title": "1. Aceptación de Términos",
+        "content": "Al acceder o utilizar la plataforma Fanatikoin (\"Plataforma\"), aceptas estar sujeto a estos Términos de Servicio (\"Términos\"). Si no estás de acuerdo con estos Términos, no puedes acceder o utilizar la Plataforma."
+      },
+      "description": {
+        "title": "2. Descripción del Servicio",
+        "content": "Fanatikoin es una plataforma basada en blockchain que permite a los usuarios comprar, vender e intercambiar tokens de fans digitales en la Cadena Chiliz. La Plataforma proporciona un mercado para tokens de equipos, subastas y servicios relacionados."
+      },
+      "registration": {
+        "title": "3. Registro de Usuario",
+        "content": "Para acceder a ciertas funciones de la Plataforma, es posible que debas registrarte para obtener una cuenta. Aceptas proporcionar información precisa, actual y completa durante el proceso de registro y actualizar dicha información para mantenerla precisa, actual y completa."
+      },
+      "conduct": {
+        "title": "4. Conducta del Usuario",
+        "content": "Aceptas no: Utilizar la Plataforma para cualquier propósito ilegal o en violación de cualquier ley local, estatal, nacional o internacional; Violar o alentar a otros a violar los derechos de terceros, incluidos los derechos de propiedad intelectual; Publicar, cargar o distribuir cualquier contenido que sea ilegal, difamatorio, calumnioso, inexacto o que una persona razonable podría considerar objetable; Interferir con las características de seguridad de la Plataforma; Utilizar cualquier robot, araña, raspador u otros medios automatizados para acceder a la Plataforma; Intentar eludir cualquier técnica de filtrado de contenido que empleemos; Intentar obtener acceso no autorizado a cualquier parte de la Plataforma."
+      },
+      "blockchain": {
+        "title": "5. Transacciones Blockchain",
+        "content": "Todas las transacciones en la Plataforma se facilitan a través de contratos inteligentes en la blockchain de Chiliz. Al utilizar la Plataforma, reconoces que: Las transacciones blockchain son irreversibles y no se pueden cancelar una vez iniciadas; Eres responsable de la seguridad de tu billetera y claves privadas; Las transacciones blockchain pueden incurrir en tarifas de red (tarifas de gas) que no son controladas por Fanatikoin; El valor de los tokens digitales puede ser volátil y puede cambiar rápidamente."
+      },
+      "fees": {
+        "title": "6. Tarifas y Pagos",
+        "content": "Fanatikoin cobra una tarifa de plataforma del 2.5% en las transacciones realizadas a través de la Plataforma. Esta tarifa se calcula automáticamente y se deduce del monto de la transacción. Pueden aplicarse tarifas de red adicionales para transacciones blockchain."
+      },
+      "intellectual": {
+        "title": "7. Propiedad Intelectual",
+        "content": "La Plataforma y su contenido original, características y funcionalidad son propiedad de Fanatikoin y están protegidos por leyes internacionales de derechos de autor, marcas comerciales, patentes, secretos comerciales y otros derechos de propiedad intelectual o leyes de derechos de propiedad."
+      },
+      "userContent": {
+        "title": "8. Contenido del Usuario",
+        "content": "Conservas la propiedad de cualquier contenido que envíes a la Plataforma. Al enviar contenido, otorgas a Fanatikoin una licencia mundial, no exclusiva, libre de regalías para usar, reproducir, modificar, adaptar, publicar, traducir y distribuir tu contenido en cualquier medio existente o futuro."
+      },
+      "disclaimer": {
+        "title": "9. Descargo de Garantías",
+        "content": "LA PLATAFORMA SE PROPORCIONA \"TAL CUAL\" Y \"SEGÚN DISPONIBILIDAD\" SIN GARANTÍAS DE NINGÚN TIPO, YA SEAN EXPRESAS O IMPLÍCITAS, INCLUYENDO, PERO NO LIMITADO A, GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN."
+      },
+      "limitation": {
+        "title": "10. Limitación de Responsabilidad",
+        "content": "EN NINGÚN CASO FANATIKOIN SERÁ RESPONSABLE POR DAÑOS INDIRECTOS, INCIDENTALES, ESPECIALES, CONSECUENTES O PUNITIVOS, INCLUYENDO PÉRDIDA DE BENEFICIOS, DATOS O INTERRUPCIÓN DEL NEGOCIO, DERIVADOS DE O EN CONEXIÓN CON TU ACCESO A, USO DE, O INCAPACIDAD PARA USAR LA PLATAFORMA."
+      },
+      "indemnification": {
+        "title": "11. Indemnización",
+        "content": "Aceptas indemnizar y eximir de responsabilidad a Fanatikoin y sus funcionarios, directores, empleados y agentes de cualquier reclamo, responsabilidad, daño, pérdida y gasto, incluidos honorarios legales razonables, que surjan de o estén relacionados de alguna manera con tu acceso o uso de la Plataforma o tu violación de estos Términos."
+      },
+      "governing": {
+        "title": "12. Ley Aplicable",
+        "content": "Estos Términos se regirán e interpretarán de acuerdo con las leyes de la jurisdicción en la que Fanatikoin está establecido, sin tener en cuenta sus disposiciones sobre conflictos de leyes."
+      },
+      "changes": {
+        "title": "13. Cambios en los Términos",
+        "content": "Fanatikoin se reserva el derecho de modificar o reemplazar estos Términos en cualquier momento. Si una revisión es material, proporcionaremos al menos 30 días de aviso antes de que los nuevos términos entren en vigencia. Lo que constituye un cambio material será determinado a nuestra exclusiva discreción."
+      },
+      "contact": {
+        "title": "14. Información de Contacto",
+        "content": "Si tienes alguna pregunta sobre estos Términos, contáctanos en support@fanatikoin.com."
+      }
+    }
+  },
+
+  "faq": {
+    "meta": {
+      "title": "Preguntas Frecuentes",
+      "description": "Encuentra respuestas a preguntas comunes sobre Fanatikoin, tokens de fans y tecnología blockchain.",
+      "keywords": "FAQ, preguntas, respuestas, tokens de fans, blockchain, Chiliz, Fanatikoin"
+    },
+    "title": "Preguntas Frecuentes",
+    "description": "Encuentra respuestas a las preguntas más comunes sobre Fanatikoin y tokens de fans.",
+    "questions": {
+      "what": {
+        "question": "¿Qué son los tokens de fans?",
+        "answer": "Los tokens de fans son activos digitales construidos sobre tecnología blockchain que dan a los aficionados deportivos acceso a una variedad de beneficios relacionados con sus equipos favoritos. Estos beneficios pueden incluir derechos de voto en ciertas decisiones del equipo, mercancía exclusiva, experiencias especiales y más. En Fanatikoin, los tokens de fans están construidos en la blockchain de Chiliz, proporcionando seguridad, transparencia y verificación de propiedad."
+      },
+      "how": {
+        "question": "¿Cómo compro tokens de fans?",
+        "answer": "Para comprar tokens de fans en Fanatikoin, necesitarás conectar una billetera Web3 compatible como MetaMask o usar nuestra solución integrada Web3Auth para inicios de sesión sociales. Una vez conectado, puedes navegar por los tokens disponibles en nuestro mercado, seleccionar la cantidad que deseas comprar y completar la transacción usando tokens CHZ (Chiliz). La tarifa de la plataforma es del 2.5%, y los tokens se transferirán directamente a tu billetera después de la compra."
+      },
+      "benefits": {
+        "question": "¿Qué beneficios proporcionan los tokens de fans?",
+        "answer": "Los tokens de fans proporcionan varios beneficios dependiendo del equipo. Los beneficios comunes incluyen: derechos de voto en ciertas decisiones del equipo (como diseños de camisetas o música de partidos), acceso a contenido exclusivo, descuentos en mercancía oficial, oportunidades de ganar entradas para partidos, experiencias VIP y participación en eventos exclusivos. Cada token de equipo enumera sus beneficios específicos en su página de token."
+      },
+      "buy": {
+        "question": "¿Necesito criptomonedas para comprar tokens de fans?",
+        "answer": "Sí, los tokens de fans en Fanatikoin se compran usando CHZ (Chiliz), la criptomoneda nativa de la blockchain de Chiliz. Puedes adquirir CHZ a través de varios intercambios de criptomonedas y luego transferirlos a tu billetera conectada. También estamos trabajando en implementar transacciones sin gas a través de Biconomy para hacer que el proceso de compra sea más fluido para los usuarios nuevos en la tecnología blockchain."
+      },
+      "secure": {
+        "question": "¿Qué tan seguros son los tokens de fans?",
+        "answer": "Los tokens de fans en Fanatikoin están construidos en la blockchain de Chiliz, que utiliza protocolos de seguridad probados. La propiedad de los tokens se registra en la blockchain, lo que los hace seguros y a prueba de manipulaciones. Tus tokens se almacenan en tu billetera personal, a la que solo tú tienes acceso a través de tus claves privadas o frase semilla. Recomendamos usar billeteras de hardware para seguridad adicional al almacenar cantidades significativas de tokens."
+      },
+      "wallet": {
+        "question": "¿Qué billeteras son compatibles con Fanatikoin?",
+        "answer": "Fanatikoin es compatible con varias billeteras Web3, incluyendo MetaMask, billeteras compatibles con WalletConnect y la billetera Socios.com. También ofrecemos integración con Web3Auth, lo que te permite iniciar sesión usando cuentas sociales como Google, Facebook o Twitter sin necesidad de administrar una billetera criptográfica tradicional. Todas las billeteras deben estar configuradas para funcionar con la blockchain de Chiliz (ID de Cadena: 1001 para Spicy Testnet)."
+      },
+      "sell": {
+        "question": "¿Cómo puedo vender mis tokens de fans?",
+        "answer": "Puedes vender tus tokens de fans directamente en el mercado de Fanatikoin. Simplemente conecta tu billetera, navega a 'Mis Tokens', selecciona los tokens que deseas vender, especifica la cantidad y confirma la transacción. También puedes participar en subastas para potencialmente vender tokens a precios premium. Los ingresos de las ventas se acreditarán en tu billetera en tokens CHZ."
+      },
+      "biconomy": {
+        "question": "¿Qué es la integración de Biconomy?",
+        "answer": "La integración de Biconomy en Fanatikoin permite transacciones sin gas, lo que significa que puedes interactuar con la plataforma sin tener que pagar tarifas de gas por cada transacción. Esta tecnología utiliza meta-transacciones y abstracción de cuentas para crear una experiencia más amigable para el usuario, especialmente para aquellos nuevos en blockchain. Actualmente estamos implementando esta característica para mejorar la accesibilidad y reducir la fricción en la experiencia del usuario."
+      }
+    }
+  },
+
+  "glossary": {
+    "meta": {
+      "title": "Glosario de Blockchain",
+      "description": "Aprende los términos y conceptos clave relacionados con la tecnología blockchain, tokens de fans y la plataforma Fanatikoin.",
+      "keywords": "glosario blockchain, términos crypto, terminología Web3, tokens de fans, Chiliz, Fanatikoin"
+    },
+    "title": "Glosario de Blockchain",
+    "description": "Entendiendo la terminología utilizada en el ecosistema de blockchain y tokens de fans.",
+    "terms": {
+      "blockchain": {
+        "term": "Blockchain",
+        "definition": "Un libro de contabilidad digital distribuido que registra transacciones en muchas computadoras para que las transacciones registradas no puedan ser alteradas retroactivamente. Esta tecnología es la base de las criptomonedas y los tokens de fans."
+      },
+      "wallet": {
+        "term": "Billetera",
+        "definition": "Una herramienta digital que permite a los usuarios almacenar, gestionar e interactuar con sus criptomonedas y tokens. Las billeteras pueden ser basadas en software (como MetaMask) o dispositivos de hardware (como Ledger o Trezor)."
+      },
+      "privateKey": {
+        "term": "Clave Privada",
+        "definition": "Un número secreto que permite gastar criptomonedas. Cualquier persona con acceso a la clave privada de una billetera tiene control sobre los fondos dentro de ella. Nunca debe compartirse con otros."
+      },
+      "publicKey": {
+        "term": "Clave Pública",
+        "definition": "Un código criptográfico que permite a los usuarios recibir criptomonedas en sus cuentas. Se deriva de la clave privada pero no la revela. Puede compartirse de forma segura con otros."
+      },
+      "gas": {
+        "term": "Gas",
+        "definition": "La tarifa requerida para realizar una transacción en una red blockchain. Las tarifas de gas compensan a los mineros o validadores por la energía de cómputo requerida para procesar y validar transacciones."
+      },
+      "gasless": {
+        "term": "Transacciones sin Gas",
+        "definition": "Un método que permite a los usuarios interactuar con aplicaciones blockchain sin pagar directamente tarifas de gas. En Fanatikoin, implementamos esto a través de la integración de Biconomy para mejorar la experiencia del usuario."
+      },
+      "smartContract": {
+        "term": "Contrato Inteligente",
+        "definition": "Contratos autoejecutables con los términos directamente escritos en código. Aplican y ejecutan automáticamente acuerdos cuando se cumplen condiciones predeterminadas, sin necesidad de intermediarios."
+      },
+      "token": {
+        "term": "Token",
+        "definition": "Un activo digital que representa cierto valor o utilidad dentro de un ecosistema específico. Los tokens de fans son un tipo de token de utilidad que proporcionan beneficios relacionados con equipos deportivos."
+      },
+      "fanToken": {
+        "term": "Token de Fan",
+        "definition": "Un tipo de token de utilidad que da a los poseedores acceso a varios beneficios relacionados con equipos deportivos, como derechos de voto, mercancía exclusiva y experiencias especiales."
+      },
+      "chiliz": {
+        "term": "Chiliz (CHZ)",
+        "definition": "La criptomoneda nativa de la blockchain de Chiliz, utilizada para transacciones en la plataforma Fanatikoin. CHZ es la moneda utilizada para comprar tokens de fans."
+      },
+      "web3": {
+        "term": "Web3",
+        "definition": "La tercera generación de servicios de internet, caracterizada por la descentralización y la economía basada en tokens. Aplicaciones Web3 como Fanatikoin operan en tecnología blockchain y enfatizan la propiedad del usuario de datos y activos digitales."
+      },
+      "web3auth": {
+        "term": "Web3Auth",
+        "definition": "Una solución de autenticación que permite a los usuarios acceder a aplicaciones Web3 utilizando inicios de sesión sociales familiares (Google, Facebook, etc.) sin necesidad de gestionar claves privadas complejas o frases semilla."
+      },
+      "biconomy": {
+        "term": "Biconomy",
+        "definition": "Una infraestructura Web3 que permite transacciones sin gas y una incorporación simplificada de usuarios para aplicaciones blockchain. Fanatikoin se integra con Biconomy para proporcionar una experiencia de usuario más fluida."
+      },
+      "nft": {
+        "term": "NFT (Token No Fungible)",
+        "definition": "Un activo digital único que representa la propiedad de un elemento específico o pieza de contenido. A diferencia de las criptomonedas, cada NFT tiene propiedades distintas y no puede intercambiarse uno por uno."
+      },
+      "defi": {
+        "term": "DeFi (Finanzas Descentralizadas)",
+        "definition": "Una forma de finanzas basada en blockchain que no depende de intermediarios financieros centrales como los bancos. Las plataformas DeFi permiten a los usuarios prestar, pedir prestado y comerciar activos directamente entre sí."
+      },
+      "dao": {
+        "term": "DAO (Organización Autónoma Descentralizada)",
+        "definition": "Una organización representada por reglas codificadas como un programa informático que es transparente, controlada por los miembros de la organización y no influenciada por un gobierno central."
+      },
+      "metamask": {
+        "term": "MetaMask",
+        "definition": "Una popular billetera de criptomonedas y puerta de enlace a aplicaciones blockchain. Permite a los usuarios almacenar Ethereum y otros tokens, e interactuar con aplicaciones descentralizadas a través de una extensión de navegador o aplicación móvil."
+      },
+      "walletConnect": {
+        "term": "WalletConnect",
+        "definition": "Un protocolo abierto que permite a los usuarios conectar sus billeteras de criptomonedas móviles a aplicaciones descentralizadas escaneando un código QR. Permite una interacción segura entre billeteras y dApps."
+      },
+      "chainId": {
+        "term": "ID de Cadena",
+        "definition": "Un identificador único para una red blockchain. El Chiliz Spicy Testnet, que Fanatikoin utiliza para desarrollo y pruebas, tiene un ID de Cadena de 1001."
+      },
+      "rpc": {
+        "term": "RPC (Llamada a Procedimiento Remoto)",
+        "definition": "Un protocolo que permite a un programa solicitar un servicio de otro programa ubicado en otra computadora o red. En blockchain, las URL RPC se utilizan para conectar billeteras a redes específicas."
+      }
+    }
+  },
+  "login": {
+    "title": "Iniciar Sesión",
+    "subtitle": "Accede a tu cuenta de Fanatikoin",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "createAccount": "Crear cuenta",
+    "loginButton": "Iniciar Sesión",
+    "orContinueWith": "O continuar con",
+    "web3Login": "Iniciar sesión con Web3",
+    "walletLogin": "Iniciar sesión con Billetera",
+    "traditional": "Inicio de Sesión Tradicional",
+    "web3auth": "Iniciar sesión con Web3Auth",
+    "error": {
+      "invalidCredentials": "Credenciales inválidas",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "passwordRequired": "La contraseña es obligatoria"
+    },
+    "success": "Inicio de sesión exitoso"
+  },
+  "register": {
+    "title": "Registrarse",
+    "subtitle": "Crea una cuenta en Fanatikoin",
+    "username": "Nombre de Usuario",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "hasAccount": "¿Ya tienes una cuenta?",
+    "loginHere": "Inicia sesión aquí",
+    "registerButton": "Registrarse",
+    "orContinueWith": "O continuar con",
+    "web3Register": "Registrarse con Web3",
+    "walletRegister": "Registrarse con Billetera",
+    "termsAgreement": "Al registrarte, aceptas nuestros Términos de Servicio y Política de Privacidad",
+    "error": {
+      "usernameRequired": "El nombre de usuario es obligatorio",
+      "emailRequired": "El correo electrónico es obligatorio",
+      "invalidEmail": "Correo electrónico inválido",
+      "passwordRequired": "La contraseña es obligatoria",
+      "passwordMismatch": "Las contraseñas no coinciden",
+      "passwordLength": "La contraseña debe tener al menos 8 caracteres",
+      "emailExists": "Este correo electrónico ya está registrado"
+    },
+    "success": "Registro exitoso"
+  }
+}

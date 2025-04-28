@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Chivas colors gradient -->
+    <linearGradient id="chivasGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e40520" />
+      <stop offset="100%" stop-color="#c01018" />
+    </linearGradient>
+    <filter id="innerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="0" dy="0" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background to match site -->
+  <rect width="100%" height="100%" fill="#1a1a1a" />
+  
+  <!-- Main token -->
+  <g transform="translate(150, 150)">
+    <animateTransform attributeName="transform" type="translate" values="150,150; 150,145; 150,150" dur="4s" repeatCount="indefinite" />
+    
+    <!-- Outer coin -->
+    <circle cx="0" cy="0" r="100" fill="url(#chivasGradient)" filter="url(#innerShadow)">
+      <animate attributeName="r" values="100;105;100" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="85" fill="#1a1a1a" opacity="0.3" />
+    
+    <!-- Team emblem -->
+    <g transform="translate(0, -15) scale(0.8)">
+      <!-- Chivas shield -->
+      <path d="M0,-70 C60,-70 80,-40 80,20 C80,70 40,90 0,110 C-40,90 -80,70 -80,20 C-80,-40 -60,-70 0,-70" 
+            fill="#e40520" stroke="#ffffff" stroke-width="3" />
+      
+      <!-- Chivas stripes -->
+      <g clip-path="url(#shieldClip)">
+        <rect x="-60" y="-50" width="120" height="20" fill="#e40520" />
+        <rect x="-60" y="-30" width="120" height="20" fill="#ffffff" />
+        <rect x="-60" y="-10" width="120" height="20" fill="#e40520" />
+        <rect x="-60" y="10" width="120" height="20" fill="#ffffff" />
+        <rect x="-60" y="30" width="120" height="20" fill="#e40520" />
+        <rect x="-60" y="50" width="120" height="20" fill="#ffffff" />
+      </g>
+      
+      <!-- C.D.G text -->
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="white">C.D.G</text>
+    </g>
+    
+    <!-- Team name -->
+    <text x="0" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">CHIVAS GUADALAJARA</text>
+    
+    <!-- Animated pulse rings -->
+    <circle cx="0" cy="0" r="110" stroke="#e40520" stroke-width="2" fill="none" opacity="0">
+      <animate attributeName="r" values="110;140;170" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.2;0" dur="3s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
