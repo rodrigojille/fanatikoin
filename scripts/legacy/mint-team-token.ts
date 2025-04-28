@@ -20,7 +20,7 @@ async function main() {
     // If contract uses purchaseTokens (e.g., payable in CHZ)
     const pricePerToken = await TeamToken.currentPrice();
     const totalCost = pricePerToken * BigInt(mintAmount);
-    const tx = await TeamToken.purchaseTokens(BigInt(mintAmount), { value: totalCost });
+    const tx = await TeamToken.purchaseTokens(BigInt(mintAmount));
     await tx.wait();
     console.log(`Minted ${mintAmount} tokens to ${deployer.address} using purchaseTokens.`);
   } else if (typeof TeamToken.mint === "function") {
